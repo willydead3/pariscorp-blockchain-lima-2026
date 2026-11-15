@@ -3,610 +3,353 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#07152e">
-<title>Blockchain Experience Lima 2026 | PARISCORP</title>
-<meta name="description" content="Conoce PARISCORP, Capital Staking, Blockchain, negocios y crecimiento personal. Evento presencial en Lima.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10091c">
+<title>Blockchain Experience | PARISCORP Lima 2026</title>
+<meta name="description" content="Conecta, aprende y descubre. Blockchain Experience Lima 2026.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --bg:#050b18;
-  --panel:#0c1930;
-  --blue:#2878ff;
-  --cyan:#55d9ff;
-  --white:#f5f8ff;
-  --muted:#9aabc5;
-  --border:rgba(110,165,255,.18);
+  --bg:#10091c;
+  --card:#170e23;
+  --purple:#b65cff;
+  --purple2:#8128ce;
+  --white:#fff;
+  --muted:#c2b4ce;
 }
-
-*{box-sizing:border-box;margin:0;padding:0}
-
+*{box-sizing:border-box}
 html{scroll-behavior:smooth}
-
 body{
-  background:var(--bg);
+  margin:0;
+  padding:25px 14px 55px;
+  min-height:100vh;
+  background:
+    radial-gradient(ellipse at 50% 0%,#34204e 0%,transparent 55%),
+    #10091c;
   color:var(--white);
   font-family:Inter,sans-serif;
-  line-height:1.6;
 }
-
-a{text-decoration:none;color:inherit}
-
-.container{
-  width:min(1120px,90%);
-  margin:auto;
+.page{max-width:850px;margin:auto}
+.card{
+  background:linear-gradient(145deg,#1b1028,#100918);
+  border:1px solid rgba(195,120,255,.25);
+  border-radius:20px;
+  padding:25px;
+  box-shadow:0 20px 70px rgba(0,0,0,.35);
 }
-
-header{
-  position:absolute;
-  width:100%;
-  top:0;
-  z-index:10;
-  border-bottom:1px solid var(--border);
-  background:rgba(5,11,24,.75);
-  backdrop-filter:blur(14px);
-}
-
-.nav{
-  height:76px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-.logo{
-  font-family:"Space Grotesk",sans-serif;
-  font-weight:700;
-  font-size:24px;
-  letter-spacing:2px;
-}
-
-.logo span{color:var(--cyan)}
-
-.nav a{
-  color:var(--muted);
-  font-size:13px;
-  margin-left:24px;
-}
-
-.nav .nav-button{
-  color:white;
-  background:var(--blue);
-  padding:11px 19px;
-  border-radius:8px;
-}
-
-.hero{
-  min-height:760px;
-  padding:155px 0 85px;
-  display:flex;
-  align-items:center;
+.brand{
   text-align:center;
-  background:
-  radial-gradient(ellipse at 50% 30%,rgba(26,100,255,.27),transparent 55%),
-  radial-gradient(circle at 10% 90%,rgba(0,190,255,.10),transparent 30%),
-  linear-gradient(140deg,#07152e,#050b18 65%);
+  font-family:"Space Grotesk",sans-serif;
+  font-size:13px;
+  letter-spacing:4px;
+  color:#d7b3ff;
+  margin-bottom:17px;
+}
+h1{
+  font-family:"Space Grotesk",sans-serif;
+  color:#d084ff;
+  text-align:center;
+  font-size:clamp(27px,5vw,40px);
+  margin:0;
+  line-height:1.2;
+}
+.subtitle{
+  text-align:center;
+  font-size:17px;
+  font-weight:600;
+  margin:12px 0 20px;
+}
+.intro{
+  color:var(--muted);
+  text-align:center;
+  font-size:14px;
+  line-height:1.7;
+  max-width:650px;
+  margin:0 auto 20px;
+}
+.video-frame{
   position:relative;
+  width:100%;
+  background:#050309;
+  border-radius:15px;
+  overflow:hidden;
+  border:1px solid rgba(190,120,255,.25);
+}
+video{
+  display:block;
+  width:100%;
+  max-height:650px;
+  aspect-ratio:16/9;
+  object-fit:contain;
+  background:#050309;
+}
+.video-status{
+  text-align:center;
+  font-size:12px;
+  color:#cdb6e0;
+  margin-top:13px;
+}
+.progress-info{
+  display:flex;
+  justify-content:space-between;
+  color:#cdb6e0;
+  font-size:12px;
+  margin-top:18px;
+  margin-bottom:8px;
+}
+.progress-track{
+  height:9px;
+  background:#382643;
+  border-radius:20px;
   overflow:hidden;
 }
-
-.hero:before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background-image:
-  linear-gradient(rgba(80,140,255,.045) 1px,transparent 1px),
-  linear-gradient(90deg,rgba(80,140,255,.045) 1px,transparent 1px);
-  background-size:55px 55px;
-  mask-image:linear-gradient(to bottom,black,transparent);
+.progress-fill{
+  height:100%;
+  width:0%;
+  border-radius:20px;
+  background:linear-gradient(90deg,#7620bc,#c46cff);
+  box-shadow:0 0 12px #ad50f5;
+  transition:width .15s linear;
 }
-
-.hero-content{position:relative;z-index:1;width:100%}
-
-.eyebrow{
-  display:inline-block;
-  padding:8px 16px;
-  border:1px solid rgba(85,217,255,.35);
-  border-radius:50px;
-  color:var(--cyan);
-  font-size:12px;
-  letter-spacing:2px;
-  margin-bottom:25px;
-}
-
-.hero h1{
-  font-family:"Space Grotesk",sans-serif;
-  font-size:clamp(52px,10vw,105px);
-  font-weight:700;
-  line-height:1;
-  letter-spacing:-4px;
-  background:linear-gradient(110deg,#fff,#8ecbff,#36a0ff);
-  background-clip:text;
-  -webkit-background-clip:text;
-  color:transparent;
-}
-
-.hero h2{
-  font-size:clamp(19px,3vw,29px);
-  margin:18px 0;
-  letter-spacing:3px;
-}
-
-.hero p{
-  max-width:690px;
-  margin:20px auto;
-  color:var(--muted);
-  font-size:16px;
-}
-
-.event-info{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:14px;
-  margin:32px 0;
-}
-
-.event-info div{
-  padding:13px 20px;
-  background:rgba(255,255,255,.045);
-  border:1px solid var(--border);
-  border-radius:10px;
-  min-width:145px;
-}
-
-.event-info small{
-  display:block;
-  color:var(--muted);
-  font-size:11px;
-}
-
-.event-info strong{font-size:16px}
-
-.button{
-  display:inline-block;
-  padding:16px 28px;
-  background:linear-gradient(110deg,#1765ef,#279fff);
-  color:white;
-  font-weight:700;
-  border-radius:9px;
-  box-shadow:0 8px 35px rgba(39,125,255,.25);
-  transition:.25s;
-}
-
-.button:hover{transform:translateY(-3px)}
-
-.section{padding:90px 0}
-
-.section-heading{
+.event-details{
   text-align:center;
-  max-width:720px;
-  margin:0 auto 45px;
+  padding:23px 5px 13px;
 }
-
-.section-heading span{
-  color:var(--cyan);
-  font-size:12px;
-  letter-spacing:3px;
-  font-weight:700;
+.date{
+  color:#d99aff;
+  font-size:19px;
+  font-weight:800;
 }
-
-.section-heading h2{
-  font-family:"Space Grotesk",sans-serif;
-  font-size:clamp(30px,5vw,43px);
-  line-height:1.2;
-  margin:13px 0;
-}
-
-.section-heading p{color:var(--muted)}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.card{
-  background:linear-gradient(145deg,#10213e,#091426);
-  border:1px solid var(--border);
-  border-radius:15px;
-  padding:28px;
-  transition:.25s;
-}
-
-.card:hover{
-  transform:translateY(-5px);
-  border-color:var(--blue);
-}
-
-.card .icon{font-size:31px;margin-bottom:18px}
-
-.card h3{font-size:19px;margin-bottom:12px}
-
-.card p{color:var(--muted);font-size:14px}
-
-.company{
-  background:linear-gradient(120deg,#0b1c39,#091426);
-  border-top:1px solid var(--border);
-  border-bottom:1px solid var(--border);
-}
-
-.company-content{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:45px;
-  align-items:center;
-}
-
-.company h2{
+.price{
   font-family:"Space Grotesk",sans-serif;
   font-size:38px;
-  line-height:1.2;
-  margin:15px 0;
-}
-
-.company p{color:var(--muted);margin:15px 0}
-
-.company-note{
-  background:rgba(40,120,255,.08);
-  border:1px solid var(--border);
-  padding:27px;
-  border-radius:15px;
-}
-
-.company-note h3{margin-bottom:12px}
-
-.speakers{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:22px;
-  max-width:760px;
-  margin:auto;
-}
-
-.speaker{
-  padding:32px;
-  border-radius:15px;
-  text-align:center;
-  background:linear-gradient(145deg,#14294b,#0b1528);
-  border:1px solid var(--border);
-}
-
-.speaker .initial{
-  width:85px;
-  height:85px;
-  margin:0 auto 18px;
-  display:grid;
-  place-items:center;
-  border-radius:50%;
-  font-size:27px;
   font-weight:700;
-  color:var(--cyan);
-  background:rgba(40,120,255,.16);
-  border:1px solid var(--border);
+  margin:7px 0;
 }
-
-.speaker h3{font-size:21px}
-.speaker p{color:var(--muted);font-size:13px;margin-top:7px}
-
-.event-location{
-  background:linear-gradient(135deg,#10254a,#091426);
-  border:1px solid var(--border);
-  border-radius:18px;
-  padding:35px;
+.location{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.7;
+}
+.cta{
+  display:block;
+  width:100%;
+  border:0;
+  border-radius:12px;
+  padding:18px 15px;
+  font-family:Inter,sans-serif;
+  font-size:15px;
+  font-weight:800;
+  color:white;
+  background:linear-gradient(100deg,#34223f,#4c315b);
+  cursor:not-allowed;
+  opacity:.8;
+  margin-top:20px;
+  transition:background .4s,box-shadow .4s,transform .2s;
+}
+.cta.ready{
+  background:linear-gradient(100deg,#8525ce,#c05aff);
+  box-shadow:0 0 25px rgba(183,75,255,.45);
+  cursor:pointer;
+  opacity:1;
+  animation:glow 1.8s infinite alternate;
+}
+.cta.ready:hover{transform:translateY(-2px)}
+@keyframes glow{
+  from{box-shadow:0 0 12px rgba(183,75,255,.35)}
+  to{box-shadow:0 0 30px rgba(183,75,255,.75)}
+}
+.lock-note{
   text-align:center;
+  font-size:12px;
+  color:#a998b7;
+  margin:10px 0 0;
 }
-
-.event-location h3{font-size:25px;margin:12px 0}
-
-.event-location p{color:var(--muted)}
-
-.price{
-  font-size:42px;
-  font-family:"Space Grotesk",sans-serif;
-  font-weight:700;
-  color:var(--cyan);
-  margin:15px 0;
-}
-
 .form-section{
-  background:radial-gradient(ellipse at 50% 0%,rgba(31,99,255,.15),transparent 60%);
+  display:none;
+  margin-top:25px;
+  padding:25px;
+  border-radius:15px;
+  background:#21142e;
+  border:1px solid rgba(190,120,255,.35);
 }
-
-.form-box{
-  max-width:720px;
-  margin:auto;
-  padding:35px;
-  background:#0b172b;
-  border:1px solid var(--border);
-  border-radius:17px;
+.form-section.show{
+  display:block;
+  animation:appear .5s ease;
 }
-
-.form-box h3{font-size:24px;margin-bottom:8px}
-
-.form-box>p{color:var(--muted);font-size:14px;margin-bottom:25px}
-
-.field{margin-bottom:18px}
-
-.field label{
+@keyframes appear{
+  from{opacity:0;transform:translateY(15px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.form-section h2{
+  text-align:center;
+  color:#d28aff;
+  font-family:"Space Grotesk",sans-serif;
+  font-size:26px;
+  margin:0 0 8px;
+}
+.form-intro{
+  color:var(--muted);
+  text-align:center;
+  font-size:13px;
+  margin-bottom:25px;
+}
+.field{margin-bottom:17px}
+label{
   display:block;
   font-size:13px;
   font-weight:600;
   margin-bottom:8px;
 }
-
-.field input,.field select{
+input,select{
   width:100%;
-  padding:14px;
-  background:#071123;
+  background:#10091c;
+  border:1px solid #543a68;
   color:white;
-  border:1px solid #263957;
-  border-radius:8px;
-  font:inherit;
-  outline:none;
+  border-radius:9px;
+  padding:14px;
+  font-size:14px;
+  font-family:Inter,sans-serif;
 }
-
-.field input:focus,.field select:focus{border-color:var(--cyan)}
-
-.field select option{background:#071123}
-
-.check{
+input:focus,select:focus{
+  outline:none;
+  border-color:#c16cff;
+}
+select option{background:#10091c}
+.consent{
   display:flex;
-  align-items:flex-start;
   gap:10px;
-  color:var(--muted);
+  align-items:flex-start;
+  color:#c5b4d2;
   font-size:12px;
+  line-height:1.6;
   margin:20px 0;
 }
-
-.check input{margin-top:4px}
-
-.form-box button{
+.consent input{
+  width:auto;
+  margin-top:3px;
+}
+.submit{
   width:100%;
+  padding:16px;
   border:0;
+  border-radius:9px;
+  background:linear-gradient(100deg,#8629d2,#c05aff);
+  color:white;
+  font-size:14px;
+  font-weight:800;
   cursor:pointer;
-  font:inherit;
 }
-
-#formMessage{
-  margin-top:15px;
+.form-message{
+  color:#d6a2ff;
+  text-align:center;
   font-size:13px;
-  color:var(--cyan);
+  margin-top:15px;
 }
-
 .disclaimer{
-  color:#8595ad;
   font-size:11px;
   line-height:1.7;
-  margin-top:22px;
+  color:#9887a5;
+  margin-top:20px;
 }
-
-footer{
-  padding:35px 0;
-  border-top:1px solid var(--border);
+.bottom{
   text-align:center;
-  color:var(--muted);
-  font-size:12px;
+  color:#907c9e;
+  font-size:11px;
+  margin-top:23px;
+  letter-spacing:1px;
 }
-
-footer strong{color:white}
-
-@media(max-width:760px){
-  .nav{height:65px}
-  .nav a:not(.nav-button){display:none}
-  .nav .nav-button{padding:9px 12px;font-size:11px}
-  .hero{min-height:auto;padding:135px 0 75px}
-  .hero h1{letter-spacing:-2px}
-  .grid{grid-template-columns:1fr}
-  .company-content{grid-template-columns:1fr}
-  .speakers{grid-template-columns:1fr}
-  .section{padding:65px 0}
-  .form-box{padding:23px}
-  .event-location{padding:25px}
+@media(max-width:600px){
+  body{padding:12px 9px 35px}
+  .card{padding:17px 12px;border-radius:15px}
+  .form-section{padding:19px 13px}
+  video{max-height:550px}
+  .date{font-size:16px}
 }
 </style>
 </head>
 
 <body>
+<main class="page">
+<section class="card">
 
-<header>
-  <div class="container nav">
-    <a href="#" class="logo">PARIS<span>CORP</span></a>
-    <nav>
-      <a href="#evento">El evento</a>
-      <a href="#empresa">La empresa</a>
-      <a href="#ponentes">Ponentes</a>
-      <a href="#registro" class="nav-button">Registrarme ↗</a>
-    </nav>
+  <div class="brand">PARISCORP PRESENTA</div>
+
+  <h1>BLOCKCHAIN EXPERIENCE</h1>
+  <div class="subtitle">Conecta. Aprende. Descubre.</div>
+
+  <p class="intro">
+    Una experiencia de negocios, tecnología, capitalización
+    y crecimiento personal. Conoce las propuestas,
+    escucha a los invitados y descubre nuevas perspectivas.
+  </p>
+
+  <div class="video-frame">
+    <video id="eventVideo"
+      autoplay
+      muted
+      playsinline
+      controls
+      preload="auto"
+      poster="">
+      <source src="./video-evento.mp4.mp4" type="video/mp4">
+      Tu navegador no puede reproducir este video.
+    </video>
   </div>
-</header>
 
-<main>
+  <div class="video-status" id="videoStatus">
+    ▶ Reproduciendo presentación del evento
+  </div>
 
-<section class="hero">
-  <div class="container hero-content">
-    <span class="eyebrow">PARISCORP PRESENTA · LIMA 2026</span>
+  <div class="progress-info">
+    <span>Progreso de presentación</span>
+    <span id="timeDisplay">00:00 / 00:00</span>
+  </div>
 
-    <h1>BLOCKCHAIN</h1>
-    <h2>BUSINESS EXPERIENCE</h2>
+  <div class="progress-track">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
 
-    <p>
-      Una experiencia empresarial para conocer nuevas tecnologías,
-      modelos de negocio, propuestas de capitalización y perspectivas
-      de crecimiento personal.
+  <div class="event-details">
+    <div class="date">18 NOVIEMBRE · 2:00 P. M.</div>
+    <div class="price">S/ 75</div>
+    <div class="location">
+      Colegio Médico del Perú (CMP)<br>
+      Av. 28 de Julio 776, Miraflores, Lima.
+    </div>
+  </div>
+
+  <button class="cta" id="participateBtn" disabled>
+    QUIERO PARTICIPAR 🔒
+  </button>
+
+  <p class="lock-note" id="lockNote">
+    Completa la presentación para desbloquear tu registro.
+  </p>
+
+  <section class="form-section" id="registration">
+    <h2>¡Excelente decisión!</h2>
+    <p class="form-intro">
+      Completa tus datos para que podamos contactarte
+      y brindarte información sobre tu participación.
     </p>
 
-    <div class="event-info">
-      <div><small>FECHA</small><strong>18 NOVIEMBRE</strong></div>
-      <div><small>HORA</small><strong>2:00 P. M.</strong></div>
-      <div><small>ENTRADA</small><strong>S/ 75</strong></div>
-    </div>
-
-    <a href="#registro" class="button">QUIERO CONOCER EL EVENTO ↗</a>
-  </div>
-</section>
-
-<section class="section" id="evento">
-  <div class="container">
-    <div class="section-heading">
-      <span>UNA EXPERIENCIA INTEGRAL</span>
-      <h2>Mucho más que una conferencia sobre Blockchain</h2>
-      <p>Conoce diferentes perspectivas del mundo empresarial,
-      financiero y tecnológico.</p>
-    </div>
-
-    <div class="grid">
-      <article class="card">
-        <div class="icon">🌐</div>
-        <h3>Tecnología Blockchain</h3>
-        <p>Conoce cómo funciona esta tecnología, sus aplicaciones
-        y su presencia en el entorno financiero y empresarial.</p>
-      </article>
-
-      <article class="card">
-        <div class="icon">📈</div>
-        <h3>Capital Staking</h3>
-        <p>Conoce la propuesta de capitalización de PARISCORP,
-        su funcionamiento, características y condiciones de participación.</p>
-      </article>
-
-      <article class="card">
-        <div class="icon">🤝</div>
-        <h3>Negocios y networking</h3>
-        <p>Conecta con emprendedores, profesionales y personas
-        interesadas en el desarrollo empresarial.</p>
-      </article>
-
-      <article class="card">
-        <div class="icon">🎯</div>
-        <h3>Crecimiento personal</h3>
-        <p>Escucha experiencias, aprendizajes y perspectivas
-        compartidas por coaches y empresarios invitados.</p>
-      </article>
-
-      <article class="card">
-        <div class="icon">💼</div>
-        <h3>Oportunidades empresariales</h3>
-        <p>Conoce diferentes empresas, propuestas y modelos
-        de negocio presentados durante el encuentro.</p>
-      </article>
-
-      <article class="card">
-        <div class="icon">💡</div>
-        <h3>Aprendizaje directo</h3>
-        <p>Participa, escucha las presentaciones y plantea
-        tus preguntas directamente a los expositores.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section company" id="empresa">
-  <div class="container company-content">
-    <div>
-      <span class="eyebrow">CONOCE PARISCORP</span>
-      <h2>Una propuesta empresarial que merece ser conocida.</h2>
-      <p>
-        PARISCORP es el holding empresarial que organiza este encuentro
-        y presentará sus diferentes servicios y propuestas de negocio.
-      </p>
-      <p>
-        Durante el evento conocerás Capital Staking, un servicio de
-        capitalización vinculado a operaciones en mercados financieros
-        Forex y al uso de tecnología Blockchain.
-      </p>
-      <p>
-        La presentación permitirá conocer su funcionamiento,
-        condiciones, procedimientos de depósito y retiro,
-        documentación y riesgos asociados.
-      </p>
-    </div>
-
-    <div class="company-note">
-      <h3>¿Qué conocerás sobre Capital Staking?</h3>
-      <p>✓ Modelo de capitalización.</p>
-      <p>✓ Referencia de rentabilidad anunciada por la empresa.</p>
-      <p>✓ Relación con los mercados Forex.</p>
-      <p>✓ Tecnología Blockchain.</p>
-      <p>✓ Procedimientos de depósito y retiro.</p>
-      <p>✓ Condiciones, documentación y riesgos.</p>
-      <p style="margin-top:20px;color:#55d9ff">
-        La información será presentada directamente por los representantes.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="ponentes">
-  <div class="container">
-    <div class="section-heading">
-      <span>INVITADOS ESPECIALES</span>
-      <h2>Conoce a nuestros conferencistas</h2>
-      <p>Empresarios y ponentes invitados compartirán
-      sus conocimientos y experiencias.</p>
-    </div>
-
-    <div class="speakers">
-      <article class="speaker">
-        <div class="initial">OD</div>
-        <h3>Orlando Denegri</h3>
-        <p>Conferencista invitado</p>
-      </article>
-
-      <article class="speaker">
-        <div class="initial">LL</div>
-        <h3>Luis Lescure</h3>
-        <p>Conferencista invitado</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-heading">
-      <span>INFORMACIÓN DEL EVENTO</span>
-      <h2>Nos encontramos en Lima</h2>
-    </div>
-
-    <div class="event-location">
-      <p>📅 MIÉRCOLES 18 DE NOVIEMBRE DE 2026</p>
-      <h3>Colegio Médico del Perú (CMP)</h3>
-      <p>Av. 28 de Julio 776, Miraflores, Lima.</p>
-      <div class="price">S/ 75</div>
-      <p>Entrada al evento · 2:00 p. m.</p>
-      <br>
-      <a class="button" href="#registro">SOLICITAR MI ACCESO</a>
-    </div>
-  </div>
-</section>
-
-<section class="section form-section" id="registro">
-  <div class="container">
-    <div class="section-heading">
-      <span>REGISTRO DE INTERÉS</span>
-      <h2>¿Te gustaría participar?</h2>
-      <p>Completa tus datos para conocer tu interés
-      y recibir información sobre el evento.</p>
-    </div>
-
-    <form class="form-box" id="leadForm">
-      <h3>Registra tus datos</h3>
-      <p>Te contactaremos para brindarte información sobre tu acceso.</p>
+    <form id="leadForm">
 
       <div class="field">
         <label for="name">Nombre completo *</label>
         <input id="name" name="name" required
-        placeholder="Tu nombre y apellido">
+          autocomplete="name" placeholder="Tu nombre y apellido">
       </div>
 
       <div class="field">
         <label for="phone">WhatsApp *</label>
         <input id="phone" name="phone" type="tel"
-        required placeholder="+51 999 999 999">
+          required autocomplete="tel"
+          placeholder="+51 999 999 999">
       </div>
 
       <div class="field">
@@ -630,13 +373,13 @@ footer strong{color:white}
           <option>Capital Staking y capitalización</option>
           <option>Negocios y emprendimiento</option>
           <option>Crecimiento personal y coaching</option>
-          <option>Networking y contactos</option>
+          <option>Networking</option>
           <option>Todos los temas</option>
         </select>
       </div>
 
       <div class="field">
-        <label for="budget">¿Cuentas con los S/75 para tu entrada? *</label>
+        <label for="budget">¿Cuentas con los S/75 de entrada? *</label>
         <select id="budget" name="budget" required>
           <option value="">Selecciona una opción</option>
           <option>Sí, cuento con el presupuesto</option>
@@ -646,7 +389,9 @@ footer strong{color:white}
       </div>
 
       <div class="field">
-        <label for="availability">¿Tienes disponibilidad el 18 de noviembre a las 2 p. m.? *</label>
+        <label for="availability">
+          ¿Tienes disponibilidad el 18 de noviembre a las 2 p. m.? *
+        </label>
         <select id="availability" name="availability" required>
           <option value="">Selecciona una opción</option>
           <option>Sí, puedo asistir</option>
@@ -655,58 +400,137 @@ footer strong{color:white}
         </select>
       </div>
 
-      <label class="check">
+      <label class="consent">
         <input type="checkbox" name="consent" required>
-        <span>Autorizo el uso de mis datos para gestionar
-        mi solicitud y recibir información sobre este evento.
-        He leído el aviso de privacidad.</span>
+        <span>
+          Autorizo el tratamiento de mis datos personales
+          para gestionar mi solicitud y recibir información
+          sobre el evento. He leído el aviso de privacidad.
+        </span>
       </label>
 
-      <button type="submit" class="button">
-        ENVIAR MI REGISTRO ↗
+      <button class="submit" type="submit">
+        ENVIAR MI SOLICITUD →
       </button>
 
-      <div id="formMessage" role="status"></div>
-
-      <div class="disclaimer">
-        Este registro expresa interés y no constituye una compra
-        ni reserva confirmada de entrada. La confirmación se realizará
-        mediante contacto posterior.
-
-        La referencia de rentabilidad de Capital Staking no constituye
-        una garantía de ganancias. Toda inversión implica riesgos,
-        y cualquier decisión debe tomarse después de revisar la
-        documentación y condiciones correspondientes.
-      </div>
+      <div class="form-message" id="formMessage"></div>
     </form>
-  </div>
+
+    <p class="disclaimer">
+      El registro expresa interés y no confirma por sí solo
+      la compra de una entrada. La información sobre Capital
+      Staking, sus condiciones y riesgos deberá revisarse
+      directamente con sus representantes. Las referencias
+      de rentabilidad no constituyen garantías de ganancias.
+    </p>
+  </section>
+
 </section>
 
+<div class="bottom">PARISCORP · BLOCKCHAIN EXPERIENCE LIMA 2026</div>
 </main>
 
-<footer>
-  <div class="container">
-    <strong>PARISCORP</strong> · Blockchain Experience Lima 2026
-    <p>© 2026 · Información del evento y registro de interesados.</p>
-    <p style="margin-top:8px">Experiencia digital desarrollada por THEMISTH.</p>
-  </div>
-</footer>
-
 <script>
+const video = document.getElementById("eventVideo");
+const progress = document.getElementById("progressFill");
+const timeDisplay = document.getElementById("timeDisplay");
+const button = document.getElementById("participateBtn");
+const status = document.getElementById("videoStatus");
+const lockNote = document.getElementById("lockNote");
+const registration = document.getElementById("registration");
 const form = document.getElementById("leadForm");
 const message = document.getElementById("formMessage");
 
-// Conectaremos aquí el servicio de almacenamiento
-// de registros antes de habilitar el formulario.
+let unlocked = false;
 
-form.addEventListener("submit", function(event) {
-  event.preventDefault();
+function formatTime(seconds){
+  if(!Number.isFinite(seconds)) return "00:00";
+  const m = Math.floor(seconds / 60);
+  const s = Math.floor(seconds % 60);
+  return String(m).padStart(2,"0") + ":" +
+         String(s).padStart(2,"0");
+}
 
-  message.textContent =
-    "El formulario está diseñado. Estamos configurando el sistema de recepción de registros. Inténtalo nuevamente cuando se habilite.";
+function updateProgress(){
+  if(!Number.isFinite(video.duration) || video.duration <= 0) return;
 
+  const percent = Math.min(
+    100,
+    (video.currentTime / video.duration) * 100
+  );
+
+  progress.style.width = percent + "%";
+
+  timeDisplay.textContent =
+    formatTime(video.currentTime) + " / " +
+    formatTime(video.duration);
+
+  if(!unlocked){
+    const brightness = 35 + percent * 0.65;
+    button.style.background =
+      `linear-gradient(100deg,
+      hsl(276,65%,${Math.min(brightness,65)}%),
+      hsl(280,100%,${Math.min(brightness + 8,75)}%))`;
+  }
+}
+
+video.addEventListener("loadedmetadata",updateProgress);
+video.addEventListener("timeupdate",updateProgress);
+
+video.addEventListener("play",()=>{
+  if(!unlocked){
+    status.textContent="▶ Presentación en reproducción";
+  }
+});
+
+video.addEventListener("pause",()=>{
+  if(!unlocked && !video.ended){
+    status.textContent="Ⅱ Presentación pausada";
+  }
+});
+
+video.addEventListener("ended",()=>{
+  unlocked=true;
+  progress.style.width="100%";
+  timeDisplay.textContent=
+    formatTime(video.duration)+" / "+
+    formatTime(video.duration);
+
+  button.disabled=false;
+  button.classList.add("ready");
+  button.textContent="QUIERO PARTICIPAR →";
+  button.style.background="";
+  status.textContent="✓ ¡Presentación completada!";
+  lockNote.textContent=
+    "¡Ya puedes continuar con tu registro!";
+});
+
+video.addEventListener("error",()=>{
+  status.textContent=
+    "No se pudo cargar el video. Verifica tu conexión.";
+});
+
+button.addEventListener("click",()=>{
+  if(!unlocked) return;
+
+  registration.classList.add("show");
+  button.textContent="REGISTRO DISPONIBLE ✓";
+  registration.scrollIntoView({behavior:"smooth",block:"start"});
+});
+
+form.addEventListener("submit",(e)=>{
+  e.preventDefault();
+
+  // El formulario todavía no está conectado a una base de datos.
+  message.textContent=
+    "El formulario está preparado visualmente. Estamos configurando la recepción segura de registros.";
+});
+  
+// Intento de reproducción automática.
+video.play().catch(()=>{
+  status.textContent=
+    "Pulsa reproducir para ver la presentación.";
 });
 </script>
-
 </body>
 </html>
