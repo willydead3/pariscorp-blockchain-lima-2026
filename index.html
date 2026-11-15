@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,531 +5,123 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#10091c">
 <title>Blockchain Experience | PARISCORP Lima 2026</title>
-<meta name="description" content="Conecta, aprende y descubre. Blockchain Experience Lima 2026.">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-
 <style>
-:root {
-  --bg:#10091c;
-  --card:#170e23;
-  --purple:#b65cff;
-  --purple2:#8128ce;
-  --white:#fff;
-  --muted:#c2b4ce;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  padding:25px 14px 55px;
-  min-height:100vh;
-  background:
-    radial-gradient(ellipse at 50% 0%,#34204e 0%,transparent 55%),
-    #10091c;
-  color:var(--white);
-  font-family:Inter,sans-serif;
-}
-.page{max-width:850px;margin:auto}
-.card{
-  background:linear-gradient(145deg,#1b1028,#100918);
-  border:1px solid rgba(195,120,255,.25);
-  border-radius:20px;
-  padding:25px;
-  box-shadow:0 20px 70px rgba(0,0,0,.35);
-}
-.brand{
-  text-align:center;
-  font-family:"Space Grotesk",sans-serif;
-  font-size:13px;
-  letter-spacing:4px;
-  color:#d7b3ff;
-  margin-bottom:17px;
-}
-h1{
-  font-family:"Space Grotesk",sans-serif;
-  color:#d084ff;
-  text-align:center;
-  font-size:clamp(27px,5vw,40px);
-  margin:0;
-  line-height:1.2;
-}
-.subtitle{
-  text-align:center;
-  font-size:17px;
-  font-weight:600;
-  margin:12px 0 20px;
-}
-.intro{
-  color:var(--muted);
-  text-align:center;
-  font-size:14px;
-  line-height:1.7;
-  max-width:650px;
-  margin:0 auto 20px;
-}
-.video-frame{
-  position:relative;
-  width:100%;
-  background:#050309;
-  border-radius:15px;
-  overflow:hidden;
-  border:1px solid rgba(190,120,255,.25);
-}
-video{
-  display:block;
-  width:100%;
-  max-height:650px;
-  aspect-ratio:16/9;
-  object-fit:contain;
-  background:#050309;
-}
-.video-status{
-  text-align:center;
-  font-size:12px;
-  color:#cdb6e0;
-  margin-top:13px;
-}
-.progress-info{
-  display:flex;
-  justify-content:space-between;
-  color:#cdb6e0;
-  font-size:12px;
-  margin-top:18px;
-  margin-bottom:8px;
-}
-.progress-track{
-  height:9px;
-  background:#382643;
-  border-radius:20px;
-  overflow:hidden;
-}
-.progress-fill{
-  height:100%;
-  width:0%;
-  border-radius:20px;
-  background:linear-gradient(90deg,#7620bc,#c46cff);
-  box-shadow:0 0 12px #ad50f5;
-  transition:width .15s linear;
-}
-.event-details{
-  text-align:center;
-  padding:23px 5px 13px;
-}
-.date{
-  color:#d99aff;
-  font-size:19px;
-  font-weight:800;
-}
-.price{
-  font-family:"Space Grotesk",sans-serif;
-  font-size:38px;
-  font-weight:700;
-  margin:7px 0;
-}
-.location{
-  color:var(--muted);
-  font-size:13px;
-  line-height:1.7;
-}
-.cta{
-  display:block;
-  width:100%;
-  border:0;
-  border-radius:12px;
-  padding:18px 15px;
-  font-family:Inter,sans-serif;
-  font-size:15px;
-  font-weight:800;
-  color:white;
-  background:linear-gradient(100deg,#34223f,#4c315b);
-  cursor:not-allowed;
-  opacity:.8;
-  margin-top:20px;
-  transition:background .4s,box-shadow .4s,transform .2s;
-}
-.cta.ready{
-  background:linear-gradient(100deg,#8525ce,#c05aff);
-  box-shadow:0 0 25px rgba(183,75,255,.45);
-  cursor:pointer;
-  opacity:1;
-  animation:glow 1.8s infinite alternate;
-}
-.cta.ready:hover{transform:translateY(-2px)}
-@keyframes glow{
-  from{box-shadow:0 0 12px rgba(183,75,255,.35)}
-  to{box-shadow:0 0 30px rgba(183,75,255,.75)}
-}
-.lock-note{
-  text-align:center;
-  font-size:12px;
-  color:#a998b7;
-  margin:10px 0 0;
-}
-.form-section{
-  display:none;
-  margin-top:25px;
-  padding:25px;
-  border-radius:15px;
-  background:#21142e;
-  border:1px solid rgba(190,120,255,.35);
-}
-.form-section.show{
-  display:block;
-  animation:appear .5s ease;
-}
-@keyframes appear{
-  from{opacity:0;transform:translateY(15px)}
-  to{opacity:1;transform:translateY(0)}
-}
-.form-section h2{
-  text-align:center;
-  color:#d28aff;
-  font-family:"Space Grotesk",sans-serif;
-  font-size:26px;
-  margin:0 0 8px;
-}
-.form-intro{
-  color:var(--muted);
-  text-align:center;
-  font-size:13px;
-  margin-bottom:25px;
-}
-.field{margin-bottom:17px}
-label{
-  display:block;
-  font-size:13px;
-  font-weight:600;
-  margin-bottom:8px;
-}
-input,select{
-  width:100%;
-  background:#10091c;
-  border:1px solid #543a68;
-  color:white;
-  border-radius:9px;
-  padding:14px;
-  font-size:14px;
-  font-family:Inter,sans-serif;
-}
-input:focus,select:focus{
-  outline:none;
-  border-color:#c16cff;
-}
-select option{background:#10091c}
-.consent{
-  display:flex;
-  gap:10px;
-  align-items:flex-start;
-  color:#c5b4d2;
-  font-size:12px;
-  line-height:1.6;
-  margin:20px 0;
-}
-.consent input{
-  width:auto;
-  margin-top:3px;
-}
-.submit{
-  width:100%;
-  padding:16px;
-  border:0;
-  border-radius:9px;
-  background:linear-gradient(100deg,#8629d2,#c05aff);
-  color:white;
-  font-size:14px;
-  font-weight:800;
-  cursor:pointer;
-}
-.form-message{
-  color:#d6a2ff;
-  text-align:center;
-  font-size:13px;
-  margin-top:15px;
-}
-.disclaimer{
-  font-size:11px;
-  line-height:1.7;
-  color:#9887a5;
-  margin-top:20px;
-}
-.bottom{
-  text-align:center;
-  color:#907c9e;
-  font-size:11px;
-  margin-top:23px;
-  letter-spacing:1px;
-}
-@media(max-width:600px){
-  body{padding:12px 9px 35px}
-  .card{padding:17px 12px;border-radius:15px}
-  .form-section{padding:19px 13px}
-  video{max-height:550px}
-  .date{font-size:16px}
-}
+:root{--bg:#10091c;--panel:#21142e;--purple:#bd68ff;--muted:#c2b4ce;--border:rgba(195,120,255,.27)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;padding:28px 14px 55px;min-height:100vh;background:radial-gradient(ellipse at 50% 0%,#34204e 0%,transparent 55%),var(--bg);color:#fff;font-family:Inter,sans-serif}
+.page{max-width:900px;margin:auto}.card{padding:28px;border:1px solid var(--border);border-radius:22px;background:linear-gradient(145deg,#1b1028,#100918);box-shadow:0 20px 70px #0006}
+.brand{text-align:center;color:#d7b3ff;font:700 13px "Space Grotesk";letter-spacing:4px;margin-bottom:15px}
+h1{text-align:center;color:#d084ff;font:700 clamp(28px,5vw,43px)/1.15 "Space Grotesk";margin:0}.subtitle{text-align:center;font-size:17px;font-weight:700;margin:12px 0 18px}
+.intro,.section-intro{max-width:690px;margin:0 auto 24px;color:var(--muted);text-align:center;font-size:14px;line-height:1.75}
+.video-frame{overflow:hidden;border:1px solid var(--border);border-radius:16px;background:#050309}video{display:block;width:100%;max-height:680px;aspect-ratio:16/9;object-fit:contain;background:#050309;cursor:pointer}
+.video-status{text-align:center;color:#d5bee8;font-size:12px;margin-top:13px;line-height:1.5}
+.progress-info{display:flex;justify-content:space-between;gap:12px;margin:20px 0 8px;color:#cdb6e0;font-size:12px}.progress-track{height:9px;overflow:hidden;border-radius:20px;background:#382643}.progress-fill{width:0;height:100%;border-radius:20px;background:linear-gradient(90deg,#7620bc,#c46cff);box-shadow:0 0 12px #ad50f5;transition:width .15s linear}
+.event-details{text-align:center;padding:24px 5px 10px}.date{color:#d99aff;font-size:18px;font-weight:800}.price{font:700 39px "Space Grotesk";margin:7px 0}.location{color:var(--muted);font-size:13px;line-height:1.8}
+.cta,.submit{display:block;width:100%;padding:18px 16px;border:0;border-radius:12px;background:linear-gradient(100deg,#34223f,#4c315b);color:#fff;font-size:15px;font-weight:800;text-align:center;cursor:not-allowed;opacity:.75;transition:all .3s}.cta{margin-top:20px}.cta.ready,.submit{background:linear-gradient(100deg,#8525ce,#c05aff);box-shadow:0 0 24px #b74bff59;cursor:pointer;opacity:1}.cta.ready:hover,.submit:hover{transform:translateY(-2px)}.cta:disabled{pointer-events:none}
+.lock-note{text-align:center;color:#a998b7;font-size:12px;line-height:1.6;margin:10px 0 0}
+.hidden-section{display:none}.hidden-section.show{display:block;animation:appear .5s ease}@keyframes appear{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.info-section,.form-section{margin-top:28px;padding:25px;border:1px solid var(--border);border-radius:16px;background:var(--panel)}
+.section-title,.form-section h2{text-align:center;color:#d28aff;font:700 27px "Space Grotesk";margin:0 0 10px}
+.section-intro{font-size:13px;margin-bottom:23px}.topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.topic{padding:17px;border:1px solid #be78ff33;border-radius:12px;background:#10091c99}.topic h3{margin:0 0 7px;color:#e1baff;font-size:14px}.topic p{margin:0;color:var(--muted);font-size:12px;line-height:1.7}
+.event-summary{margin-top:20px;padding:16px;border-radius:12px;background:#10091c99;color:var(--muted);font-size:13px;line-height:1.8;text-align:center}.event-summary strong{color:#fff}
+.disclaimer{margin:17px 0 0;color:#a998b0;font-size:11px;line-height:1.7}.form-section h2{font-size:26px}.form-intro{margin:0 0 25px;color:var(--muted);text-align:center;font-size:13px;line-height:1.6}
+.field{margin-bottom:17px}label{display:block;margin-bottom:8px;font-size:13px;font-weight:600}input,select{width:100%;padding:14px;border:1px solid #543a68;border-radius:9px;outline:none;background:#10091c;color:#fff;font-size:14px}input:focus,select:focus{border-color:#c16cff}select option{background:#10091c}
+.consent{display:flex;align-items:flex-start;gap:10px;margin:20px 0;color:#c5b4d2;font-size:12px;font-weight:400;line-height:1.6}.consent input{width:auto;margin-top:3px}.submit{padding:16px;border-radius:9px}.submit:disabled{cursor:wait;opacity:.65}.form-message{margin-top:15px;color:#e0baff;text-align:center;font-size:13px;line-height:1.6}.bottom{text-align:center;color:#907c9e;font-size:11px;margin-top:24px;letter-spacing:1px}
+@media(max-width:600px){body{padding:12px 9px 35px}.card{padding:18px 12px;border-radius:15px}.info-section,.form-section{padding:19px 13px}.topic-grid{grid-template-columns:1fr}.date{font-size:16px}.progress-info{font-size:11px}video{max-height:560px}}
 </style>
 </head>
-
 <body>
-<main class="page">
-<section class="card">
+<main class="page"><section class="card">
+<div class="brand">PARISCORP PRESENTA</div>
+<h1>BLOCKCHAIN EXPERIENCE</h1><div class="subtitle">Conecta. Aprende. Descubre.</div>
+<p class="intro">Una experiencia presencial para conocer más sobre blockchain, nuevas tecnologías, capital staking, negocios, crecimiento personal y oportunidades de networking.</p>
+<div class="video-frame"><video id="eventVideo" autoplay muted playsinline preload="auto"><source src="./video-evento.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video></div>
+<div class="video-status" id="videoStatus" aria-live="polite">▶ Reproduciendo la presentación del evento…</div>
+<div class="progress-info"><span>Progreso de presentación</span><span id="timeDisplay">00:00 / 00:00</span></div>
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+<div class="event-details"><div class="date">18 DE NOVIEMBRE · 2:00 P. M.</div><div class="price">S/ 75</div><div class="location">Colegio Médico del Perú (CMP)<br>Av. 28 de Julio 776, Miraflores, Lima.</div></div>
+<button class="cta" id="learnMoreBtn" type="button" disabled>QUIERO SABER MÁS 🔒</button>
+<p class="lock-note" id="lockNote">Mira la presentación completa para conocer más sobre el evento.</p>
 
-  <div class="brand">PARISCORP PRESENTA</div>
-
-  <h1>BLOCKCHAIN EXPERIENCE</h1>
-  <div class="subtitle">Conecta. Aprende. Descubre.</div>
-
-  <p class="intro">
-    Una experiencia de negocios, tecnología, capitalización
-    y crecimiento personal. Conoce las propuestas,
-    escucha a los invitados y descubre nuevas perspectivas.
-  </p>
-
-  <div class="video-frame">
-    <video id="eventVideo"
-      autoplay
-      muted
-      playsinline
-      controls
-      preload="auto"
-      poster="">
-      <source src="./video-evento.mp4.mp4" type="video/mp4">
-      Tu navegador no puede reproducir este video.
-    </video>
-  </div>
-
-  <div class="video-status" id="videoStatus">
-    ▶ Reproduciendo presentación del evento
-  </div>
-
-  <div class="progress-info">
-    <span>Progreso de presentación</span>
-    <span id="timeDisplay">00:00 / 00:00</span>
-  </div>
-
-  <div class="progress-track">
-    <div class="progress-fill" id="progressFill"></div>
-  </div>
-
-  <div class="event-details">
-    <div class="date">18 NOVIEMBRE · 2:00 P. M.</div>
-    <div class="price">S/ 75</div>
-    <div class="location">
-      Colegio Médico del Perú (CMP)<br>
-      Av. 28 de Julio 776, Miraflores, Lima.
-    </div>
-  </div>
-
-  <button class="cta" id="participateBtn" disabled>
-    QUIERO PARTICIPAR 🔒
-  </button>
-
-  <p class="lock-note" id="lockNote">
-    Completa la presentación para desbloquear tu registro.
-  </p>
-
-  <section class="form-section" id="registration">
-    <h2>¡Excelente decisión!</h2>
-    <p class="form-intro">
-      Completa tus datos para que podamos contactarte
-      y brindarte información sobre tu participación.
-    </p>
-
-    <form id="leadForm">
-
-      <div class="field">
-        <label for="name">Nombre completo *</label>
-        <input id="name" name="name" required
-          autocomplete="name" placeholder="Tu nombre y apellido">
-      </div>
-
-      <div class="field">
-        <label for="phone">WhatsApp *</label>
-        <input id="phone" name="phone" type="tel"
-          required autocomplete="tel"
-          placeholder="+51 999 999 999">
-      </div>
-
-      <div class="field">
-        <label for="occupation">¿A qué te dedicas? *</label>
-        <select id="occupation" name="occupation" required>
-          <option value="">Selecciona una opción</option>
-          <option>Emprendedor</option>
-          <option>Empresario</option>
-          <option>Profesional</option>
-          <option>Estudiante</option>
-          <option>Inversionista</option>
-          <option>Otro</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="interest">¿Qué te interesa conocer? *</label>
-        <select id="interest" name="interest" required>
-          <option value="">Selecciona una opción</option>
-          <option>Blockchain y tecnología</option>
-          <option>Capital Staking y capitalización</option>
-          <option>Negocios y emprendimiento</option>
-          <option>Crecimiento personal y coaching</option>
-          <option>Networking</option>
-          <option>Todos los temas</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="budget">¿Cuentas con los S/75 de entrada? *</label>
-        <select id="budget" name="budget" required>
-          <option value="">Selecciona una opción</option>
-          <option>Sí, cuento con el presupuesto</option>
-          <option>Necesito más información</option>
-          <option>Por ahora no cuento con el presupuesto</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="availability">
-          ¿Tienes disponibilidad el 18 de noviembre a las 2 p. m.? *
-        </label>
-        <select id="availability" name="availability" required>
-          <option value="">Selecciona una opción</option>
-          <option>Sí, puedo asistir</option>
-          <option>Necesito confirmar mi horario</option>
-          <option>No tengo disponibilidad</option>
-        </select>
-      </div>
-
-      <label class="consent">
-        <input type="checkbox" name="consent" required>
-        <span>
-          Autorizo el tratamiento de mis datos personales
-          para gestionar mi solicitud y recibir información
-          sobre el evento. He leído el aviso de privacidad.
-        </span>
-      </label>
-
-      <button class="submit" type="submit">
-        ENVIAR MI SOLICITUD →
-      </button>
-
-      <div class="form-message" id="formMessage"></div>
-    </form>
-
-    <p class="disclaimer">
-      El registro expresa interés y no confirma por sí solo
-      la compra de una entrada. La información sobre Capital
-      Staking, sus condiciones y riesgos deberá revisarse
-      directamente con sus representantes. Las referencias
-      de rentabilidad no constituyen garantías de ganancias.
-    </p>
-  </section>
-
+<section class="info-section hidden-section" id="eventInfo">
+<h2 class="section-title">Conoce la experiencia</h2>
+<p class="section-intro">Blockchain Experience Lima 2026 es un encuentro presencial presentado por PARISCORP. La jornada busca acercar a los asistentes a conceptos, conversaciones y experiencias relacionadas con tecnología y negocios.</p>
+<div class="topic-grid">
+<article class="topic"><h3>Blockchain y tecnología</h3><p>Conoce conceptos generales de blockchain, sus aplicaciones y cómo esta tecnología está siendo explorada en distintos sectores.</p></article>
+<article class="topic"><h3>Capital Staking</h3><p>Espacio informativo para conocer qué significa el staking, cómo se presentan sus mecanismos y qué condiciones, riesgos y aspectos se deben evaluar antes de tomar decisiones.</p></article>
+<article class="topic"><h3>Negocios y emprendimiento</h3><p>Conversaciones sobre modelos de negocio, iniciativas empresariales y nuevas perspectivas para desarrollar proyectos.</p></article>
+<article class="topic"><h3>Crecimiento personal y networking</h3><p>Comparte experiencias, amplía tu red de contactos y conoce a personas interesadas en tecnología, negocios y desarrollo personal.</p></article>
+</div>
+<div class="event-summary"><strong>Fecha:</strong> 18 de noviembre de 2026 · 2:00 p. m.<br><strong>Lugar:</strong> Colegio Médico del Perú, Miraflores, Lima<br><strong>Entrada:</strong> S/ 75</div>
+<p class="disclaimer">La información sobre Capital Staking debe ser evaluada directamente con sus representantes, incluyendo funcionamiento, condiciones, costos y riesgos. Ninguna referencia a posibles resultados debe interpretarse como garantía de rentabilidad. La asistencia al evento no implica obligación de invertir ni garantiza resultados financieros.</p>
+<button class="cta ready" id="getTicketBtn" type="button">QUIERO MI ENTRADA · S/ 75 →</button>
 </section>
 
-<div class="bottom">PARISCORP · BLOCKCHAIN EXPERIENCE LIMA 2026</div>
-</main>
+<section class="form-section hidden-section" id="registration">
+<h2>Solicita tu entrada</h2><p class="form-intro">Déjanos tus datos para contactarte y orientarte sobre el proceso de participación en Blockchain Experience Lima 2026.</p>
+<form id="leadForm">
+<div class="field"><label for="nombre">Nombre completo *</label><input id="nombre" name="nombre" required autocomplete="name" placeholder="Tu nombre y apellido"></div>
+<div class="field"><label for="whatsapp">WhatsApp *</label><input id="whatsapp" name="whatsapp" type="tel" required autocomplete="tel" placeholder="+51 999 999 999"></div>
+<div class="field"><label for="ocupacion">¿A qué te dedicas? *</label><select id="ocupacion" name="ocupacion" required><option value="">Selecciona una opción</option><option>Emprendedor</option><option>Empresario</option><option>Profesional</option><option>Estudiante</option><option>Inversionista</option><option>Otro</option></select></div>
+<div class="field"><label for="interes">¿Qué tema te interesa conocer? *</label><select id="interes" name="interes" required><option value="">Selecciona una opción</option><option>Blockchain y tecnología</option><option>Capital Staking</option><option>Negocios y emprendimiento</option><option>Crecimiento personal y coaching</option><option>Networking</option><option>Todos los temas</option></select></div>
+<div class="field"><label for="presupuesto">¿Cuentas con los S/ 75 para tu entrada? *</label><select id="presupuesto" name="presupuesto" required><option value="">Selecciona una opción</option><option>Sí, cuento con el presupuesto</option><option>Necesito más información</option><option>Por ahora no cuento con el presupuesto</option></select></div>
+<div class="field"><label for="disponibilidad">¿Tienes disponibilidad el 18 de noviembre a las 2:00 p. m.? *</label><select id="disponibilidad" name="disponibilidad" required><option value="">Selecciona una opción</option><option>Sí, puedo asistir</option><option>Necesito confirmar mi horario</option><option>No tengo disponibilidad</option></select></div>
+<label class="consent"><input type="checkbox" name="consentimiento" required><span>Autorizo el uso de mis datos para gestionar esta solicitud y recibir información relacionada con el evento.</span></label>
+<button class="submit" id="submitBtn" type="submit">ENVIAR MI SOLICITUD →</button><div class="form-message" id="formMessage" role="status" aria-live="polite"></div>
+</form>
+</section>
+</section><div class="bottom">PARISCORP · BLOCKCHAIN EXPERIENCE LIMA 2026</div></main>
 
 <script>
-const video = document.getElementById("eventVideo");
-const progress = document.getElementById("progressFill");
-const timeDisplay = document.getElementById("timeDisplay");
-const button = document.getElementById("participateBtn");
-const status = document.getElementById("videoStatus");
-const lockNote = document.getElementById("lockNote");
-const registration = document.getElementById("registration");
-const form = document.getElementById("leadForm");
-const message = document.getElementById("formMessage");
-
-let unlocked = false;
-
-function formatTime(seconds){
-  if(!Number.isFinite(seconds)) return "00:00";
-  const m = Math.floor(seconds / 60);
-  const s = Math.floor(seconds % 60);
-  return String(m).padStart(2,"0") + ":" +
-         String(s).padStart(2,"0");
-}
-
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxeIsRrfJNOGt15BQD6Fdm7JykmMWRPUPyfytq_h2DMDO-dfANNlGG-mARl2sAuIyz4/exec";
+const video=document.getElementById("eventVideo");
+const progress=document.getElementById("progressFill");
+const timeDisplay=document.getElementById("timeDisplay");
+const learnMoreBtn=document.getElementById("learnMoreBtn");
+const getTicketBtn=document.getElementById("getTicketBtn");
+const statusText=document.getElementById("videoStatus");
+const lockNote=document.getElementById("lockNote");
+const eventInfo=document.getElementById("eventInfo");
+const registration=document.getElementById("registration");
+const form=document.getElementById("leadForm");
+const formMessage=document.getElementById("formMessage");
+const submitBtn=document.getElementById("submitBtn");
+let videoCompleted=false;
+function formatTime(seconds){if(!Number.isFinite(seconds))return "00:00";const m=Math.floor(seconds/60),s=Math.floor(seconds%60);return String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");}
 function updateProgress(){
-  if(!Number.isFinite(video.duration) || video.duration <= 0) return;
-
-  const percent = Math.min(
-    100,
-    (video.currentTime / video.duration) * 100
-  );
-
-  progress.style.width = percent + "%";
-
-  timeDisplay.textContent =
-    formatTime(video.currentTime) + " / " +
-    formatTime(video.duration);
-
-  if(!unlocked){
-    const brightness = 35 + percent * 0.65;
-    button.style.background =
-      `linear-gradient(100deg,
-      hsl(276,65%,${Math.min(brightness,65)}%),
-      hsl(280,100%,${Math.min(brightness + 8,75)}%))`;
-  }
+ if(!Number.isFinite(video.duration)||video.duration<=0)return;
+ const percent=Math.min(100,(video.currentTime/video.duration)*100);
+ progress.style.width=percent+"%";
+ timeDisplay.textContent=formatTime(video.currentTime)+" / "+formatTime(video.duration);
+ if(!videoCompleted){const b=34+percent*.48;learnMoreBtn.style.background=`linear-gradient(100deg,hsl(276,65%,${Math.min(b,62)}%),hsl(280,100%,${Math.min(b+8,72)}%))`;}
 }
-
 video.addEventListener("loadedmetadata",updateProgress);
 video.addEventListener("timeupdate",updateProgress);
-
-video.addEventListener("play",()=>{
-  if(!unlocked){
-    status.textContent="▶ Presentación en reproducción";
-  }
-});
-
-video.addEventListener("pause",()=>{
-  if(!unlocked && !video.ended){
-    status.textContent="Ⅱ Presentación pausada";
-  }
-});
-
+video.addEventListener("play",()=>{if(!videoCompleted)statusText.textContent="▶ Presentación en reproducción";});
+video.addEventListener("pause",()=>{if(!videoCompleted&&!video.ended)statusText.textContent="Ⅱ Presentación pausada. Pulsa el video para continuar.";});
+video.addEventListener("click",()=>{if(video.paused&&!videoCompleted)video.play().catch(()=>statusText.textContent="No se pudo iniciar el video. Recarga la página e inténtalo otra vez.");});
 video.addEventListener("ended",()=>{
-  unlocked=true;
-  progress.style.width="100%";
-  timeDisplay.textContent=
-    formatTime(video.duration)+" / "+
-    formatTime(video.duration);
-
-  button.disabled=false;
-  button.classList.add("ready");
-  button.textContent="QUIERO PARTICIPAR →";
-  button.style.background="";
-  status.textContent="✓ ¡Presentación completada!";
-  lockNote.textContent=
-    "¡Ya puedes continuar con tu registro!";
+ videoCompleted=true;progress.style.width="100%";timeDisplay.textContent=formatTime(video.duration)+" / "+formatTime(video.duration);
+ learnMoreBtn.disabled=false;learnMoreBtn.classList.add("ready");learnMoreBtn.style.background="";
+ learnMoreBtn.textContent="QUIERO SABER MÁS →";statusText.textContent="✓ ¡Presentación completada!";
+ lockNote.textContent="Ahora puedes conocer los temas y detalles del evento.";
 });
-
-video.addEventListener("error",()=>{
-  status.textContent=
-    "No se pudo cargar el video. Verifica tu conexión.";
+video.addEventListener("error",()=>statusText.textContent="No se pudo cargar el video. Verifica que video-evento.mp4 esté en la raíz del repositorio.");
+learnMoreBtn.addEventListener("click",()=>{if(!videoCompleted)return;eventInfo.classList.add("show");learnMoreBtn.textContent="INFORMACIÓN DEL EVENTO DISPONIBLE ✓";eventInfo.scrollIntoView({behavior:"smooth",block:"start"});});
+getTicketBtn.addEventListener("click",()=>{registration.classList.add("show");registration.scrollIntoView({behavior:"smooth",block:"start"});});
+form.addEventListener("submit",async(event)=>{
+ event.preventDefault();if(!form.reportValidity())return;
+ const f=new FormData(form);
+ const data={nombre:String(f.get("nombre")||"").trim(),whatsapp:String(f.get("whatsapp")||"").trim(),ocupacion:String(f.get("ocupacion")||""),interes:String(f.get("interes")||""),disponibilidad:String(f.get("disponibilidad")||""),presupuesto:String(f.get("presupuesto")||"")};
+ submitBtn.disabled=true;submitBtn.textContent="ENVIANDO…";formMessage.textContent="Estamos enviando tu solicitud. Espera un momento.";
+ try{
+  await fetch(SCRIPT_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(data)});
+  formMessage.textContent="Tu solicitud fue enviada. PARISCORP podrá contactarte por WhatsApp.";form.reset();
+ }catch(error){formMessage.textContent="No se pudo enviar la solicitud. Revisa tu conexión e inténtalo nuevamente.";}
+ finally{submitBtn.disabled=false;submitBtn.textContent="ENVIAR MI SOLICITUD →";}
 });
-
-button.addEventListener("click",()=>{
-  if(!unlocked) return;
-
-  registration.classList.add("show");
-  button.textContent="REGISTRO DISPONIBLE ✓";
-  registration.scrollIntoView({behavior:"smooth",block:"start"});
-});
-
-form.addEventListener("submit",(e)=>{
-  e.preventDefault();
-
-  // El formulario todavía no está conectado a una base de datos.
-  message.textContent=
-    "El formulario está preparado visualmente. Estamos configurando la recepción segura de registros.";
-});
-  
-// Intento de reproducción automática.
-video.play().catch(()=>{
-  status.textContent=
-    "Pulsa reproducir para ver la presentación.";
-});
+video.play().catch(()=>statusText.textContent="Pulsa el video para iniciar la presentación.");
 </script>
 </body>
 </html>
